@@ -1,0 +1,9 @@
+---
+- name: Update APT package index
+  hosts: all
+  become: yes  # Use sudo
+  tasks:
+    - name: Run apt update
+      ansible.builtin.apt:
+        update_cache: yes
+
